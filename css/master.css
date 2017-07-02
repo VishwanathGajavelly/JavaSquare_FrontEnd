@@ -29,6 +29,7 @@ label {
   font-family: oswald;
   font-weight: 500;
   font-size: 18px;
+  text-transform: uppercase;
 }
 
 .navbar-default{
@@ -37,6 +38,31 @@ label {
   background-color: #222222;
 
 }
+.menu {
+  color: white;
+}
+.menu li{
+  float: right;
+  box-sizing: border-box ;
+  display: inline;
+  padding-right: 15px;
+  color: white;
+}
+.menu li a {
+  color: white ;
+  text-decoration: none;
+
+
+}
+.menu a:hover {
+  background-color: transparent;
+  text-decoration: none;
+  border-top-width: 1px;
+  border-top-style: solid;
+  padding-top: 3px;
+  color: orange;
+}
+
 #navlist {
   color: #fff !important;
 }
