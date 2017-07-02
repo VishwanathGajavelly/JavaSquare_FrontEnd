@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html ng-app = 'Hideseek'>
+  <head>
+    <meta charset="utf-8">
+    <title> Hide & Seek ! </title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum|Oswald|Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="angular.js" charset="utf-8"></script>
+    <script src="hideseek.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <img alt="Brand" src="img/js.png" style="margin-top: 8px !important;  max-height: 35px; max-width: 35px; border-radius: 4px; ">
+          <a class="navbar-brand" href="#"> Java Square</a>
+        </div>
+
+      </div>
+    </nav>
+
+
+    <div class="container" ng-controller = 'Hideseek as hs' style= ' margin-top: 70px;' >
+          <div class="panel panel-default">
+              <!-- Default panel contents -->
+              <div class="panel-heading">
+                <label style="color: #444444"> COURSES OFFERED </label>
+                <button name="button" ng-click = hs.toggleCourses()>
+                  <span ng-if= '!hs.flag_courses'> + </span>
+                  <span ng-if = 'hs.flag_courses'> - </span>
+                </button>
+              </div>
+              <div class="panel-body" ng-show = 'hs.flag_courses'>
+                  <p> Specialized in offering Core Java.</p>
+                  <p> We educate students in all the Java Frameworks</p>
+                  <p> Theriotical Clases with lab sessions </p>
+                  <p> A Full-stack web-based project will be developed from scratch. </p>
+              </div>
+
+              <!-- List group -->
+              <ol class="list-group" ng-show = 'hs.flag_courses'>
+                <li class="list-group-item">
+                  <div class="panel-heading">
+                    <label> Java </label>
+                    <button name="button" ng-click = hs.toggleJava()>
+                      <span ng-if= '!hs.flag_java'> + </span>
+                      <span ng-if = 'hs.flag_java'> - </span>
+                    </button>
+                  </div>
+
+                  <!-- List group -->
+                  <ol class="list-group" ng-show = 'hs.flag_java'>
+                    <li class="list-group-item">1. Introduction</li>
+                    <li class="list-group-item">2. OOPS concepts</li>
+                    <li class="list-group-item">3. Multi-Threading</li>
+                    <li class="list-group-item">4. Exception-Handling</li>
+                    <li class="list-group-item">5. Garbage-Collection</li>
+                  </ol>
+                </li>
+                <li class="list-group-item">
+                  <div class="panel-heading">
+                    <label> Advanced Java </label>
+                    <button name="button" ng-click = hs.toggleAdvJava()>
+                      <span ng-if= '!hs.flag_advjava'> + </span>
+                      <span ng-if = 'hs.flag_advjava'> - </span>
+                    </button>
+                  </div>
+
+                  <!-- List group -->
+                  <ol class="list-group" ng-show = 'hs.flag_advjava'>
+                    <li class="list-group-item">1. Introduction </li>
+                    <li class="list-group-item">2. JDBC </li>
+                    <li class="list-group-item">3. Servlets</li>
+                    <li class="list-group-item">4. JSP</li>
+                    <li class="list-group-item">5. Session Tracking</li>
+                    <li class="list-group-item">6. RMI</li>
+                  </ol>
+                </li>
+                <li class="list-group-item">
+                  <div class="panel-heading">
+                    <label> Spring </label>
+                    <button name="button" ng-click = hs.toggleSpring()>
+                      <span ng-if= '!hs.flag_spring'> + </span>
+                      <span ng-if = 'hs.flag_spring'> - </span>
+                    </button>
+                  </div>
+
+                  <!-- List group -->
+                  <ol class="list-group" ng-show = 'hs.flag_spring'>
+                    <li class="list-group-item">1. Lorem</li>
+                    <li class="list-group-item">2. Ipsum</li>
+                    <li class="list-group-item">3. Facebook</li>
+                    <li class="list-group-item">4. Twitter</li>
+                    <li class="list-group-item">5. LinkedIn</li>
+                  </ol>
+                </li>
+                <li class="list-group-item">
+                  <div class="panel-heading">
+                    <label> Spring MVC </label>
+                    <button name="button" ng-click = hs.toggleSpringMvc()>
+                      <span ng-if= '!hs.flag_spring_mvc'> + </span>
+                      <span ng-if = 'hs.flag_spring_mvc'> - </span>
+                    </button>
+                  </div>
+
+                  <!-- List group -->
+                  <ol class="list-group" ng-show = 'hs.flag_spring_mvc'>
+                    <li class="list-group-item">1. Lorem</li>
+                    <li class="list-group-item">2. Ipsum</li>
+                    <li class="list-group-item">3. Facebook</li>
+                    <li class="list-group-item">4. Twitter</li>
+                    <li class="list-group-item">5. LinkedIn</li>
+                  </ol>
+                </li>
+                <li class="list-group-item">
+                  <div class="panel-heading">
+                    <label> Hibernate </label>
+                    <button name="button" ng-click = hs.toggleHibernate()>
+                      <span ng-if= '!hs.flag_hibernate'> + </span>
+                      <span ng-if = 'hs.flag_hibernate'> - </span>
+                    </button>
+                  </div>
+
+                  <!-- List group -->
+                  <ol class="list-group" ng-show = 'hs.flag_hibernate'>
+                    <li class="list-group-item">1. Lorem</li>
+                    <li class="list-group-item">2. Ipsum</li>
+                    <li class="list-group-item">3. Facebook</li>
+                    <li class="list-group-item">4. Twitter</li>
+                    <li class="list-group-item">5. LinkedIn</li>
+                  </ol>
+                </li>
+              </ol>
+          </div>
+
+          <div class="panel panel-info">
+              <!-- Default panel contents -->
+              <div class="panel-heading">
+                <label> FEE DETAILS</label>
+                <button name="button" ng-click = hs.toggleFee()>
+                  <span ng-if= '!hs.flag_fee'> + </span>
+                  <span ng-if = 'hs.flag_fee'> - </span>
+                </button>
+              </div>
+              <div class="panel-body" ng-show = 'hs.flag_fee'>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,a a</p>
+                  <p> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup.</p>
+                  <p> m, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                  <p> sed do eiusmod tempor incididunt ut labore et dolore magn</p>
+              </div>
+
+          </div>
+
+          <div class="panel panel-success">
+              <!-- Default panel contents -->
+              <div class="panel-heading">
+                <label> NEW BATCHES</label>
+                <button name="button" ng-click = hs.toggleNewBatches()>
+                  <span ng-if= '!hs.flag_new_batches'> + </span>
+                  <span ng-if = 'hs.flag_new_batches'> - </span>
+                </button>
+              </div>
+              <div class="panel-body" ng-show = 'hs.flag_new_batches'>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,a a</p>
+                  <p> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup.</p>
+                  <p> m, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                  <p> sed do eiusmod tempor incididunt ut labore et dolore magn</p>
+              </div>
+
+          </div>
+
+          <div class="panel panel-warning">
+              <!-- Default panel contents -->
+              <div class="panel-heading">
+                <label> STAFF DETAILS</label>
+                <button name="button" ng-click = hs.toggleStaffDetails()>
+                  <span ng-if= '!hs.flag_staff_details'> + </span>
+                  <span ng-if = 'hs.flag_staff_details'> - </span>
+                </button>
+              </div>
+              <div class="panel-body" ng-show = 'hs.flag_staff_details'>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,a a</p>
+                  <p> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup.</p>
+                  <p> m, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                  <p> sed do eiusmod tempor incididunt ut labore et dolore magn</p>
+              </div>
+
+          </div>
+
+          <div class="panel panel-danger">
+              <!-- Default panel contents -->
+              <div class="panel-heading">
+                <label> TIMINGS</label>
+                <button name="button" ng-click = hs.toggleTimings()>
+                  <span ng-if= '!hs.flag_timings'> + </span>
+                  <span ng-if = 'hs.flag_timings'> - </span>
+                </button>
+              </div>
+              <div class="panel-body" ng-show = 'hs.flag_timings'>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,a a</p>
+                  <p> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup.</p>
+                  <p> m, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                  <p> sed do eiusmod tempor incididunt ut labore et dolore magn</p>
+              </div>
+
+          </div>
+
+
+      </div>
+
+
+  </body>
+</html>

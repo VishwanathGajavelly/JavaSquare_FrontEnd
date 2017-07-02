@@ -1,0 +1,47 @@
+.panel-body , .list-group-item {
+  margin-left: 40px !important;
+}
+
+.list-group {
+    background-color: #b16a6a;
+}
+
+.list-group-item {
+  list-style: decimal !important;
+
+}
+
+button {
+  background-color: #f9f9f9 ;
+  float: right;
+}
+
+span {
+  color : black;
+}
+
+body {
+  font-family: Cuprum ;
+  font-size: 18px;
+  background-color: #f1f1f1 ;
+}
+label {
+  font-family: oswald;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.navbar-default{
+  font-family: Cuprum;
+  font-size: 20px;
+  background-color: #222222;
+
+}
+#navlist {
+  color: #fff !important;
+}
+
+.navbar-brand {
+  font-size: 30px;
+  color: white !important;
+}
