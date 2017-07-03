@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html ng-app = 'Hideseek'>
+<html ng-app = 'JavaSquare'>
   <head>
     <meta charset="utf-8">
-    <title> Hide & Seek ! </title>
+    <title> JavaSquare- Courses </title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum|Oswald|Slabo+27px" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-      crossorigin="anonymous">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+
     <script src="js/angular.js" charset="utf-8"></script>
-    <script src="js/hideseek.js" charset="utf-8"></script>
+    <script src="js/js.js" charset="utf-8"></script>
 
     <link rel="stylesheet" href="css/master.css">
   </head>
@@ -38,17 +37,17 @@
   </nav>
 
 
-<div class="container" ng-controller = 'Hideseek as hs' style= ' margin-top: 80px;' >
+<div class="container" ng-controller = 'JavaSquare as js' style= ' margin-top: 80px;' >
       <div class="panel panel-default">
           <!-- Default panel contents -->
-          <div class="panel-heading">
+          <div class="panel-heading" ng-click = js.toggleCourses()>
             <label style="color: #444444"> COURSES OFFERED </label>
-            <button name="button" ng-click = hs.toggleCourses()>
-              <span ng-if= '!hs.flag_courses'> + </span>
-              <span ng-if = 'hs.flag_courses'> - </span>
-            </button>
+
+              <span ng-if= '!js.flag_courses'>  &#9727;&#9698; </span>
+              <span ng-if = 'js.flag_courses'> &#9721;&#9701; </span>
+
           </div>
-          <div class="panel-body" ng-show = 'hs.flag_courses'>
+          <div class="panel-body" ng-show = 'js.flag_courses'>
               <p> Specialized in offering Core Java.</p>
               <p> We educate students in all the Java Frameworks</p>
               <p> Theriotical Clases with lab sessions </p>
@@ -56,18 +55,16 @@
           </div>
 
           <!-- List group -->
-          <ol class="list-group" ng-show = 'hs.flag_courses'>
+          <ol class="list-group" ng-show = 'js.flag_courses'>
             <li class="list-group-item">
-              <div class="panel-heading">
+              <div class="panel-heading" ng-click = js.toggleJava()>
                 <label> Java </label>
-                <button name="button" ng-click = hs.toggleJava()>
-                  <span ng-if= '!hs.flag_java'> + </span>
-                  <span ng-if = 'hs.flag_java'> - </span>
-                </button>
+                  <span ng-if= '!js.flag_java'>  &#9727;&#9698;  </span>
+                  <span ng-if = 'js.flag_java'> &#9721;&#9701;  </span>
               </div>
 
               <!-- List group -->
-              <ol class="list-group" ng-show = 'hs.flag_java'>
+              <ol class="list-group" ng-show = 'js.flag_java'>
                 <li class="list-group-item">1. Introduction</li>
                 <li class="list-group-item">2. OOPS concepts</li>
                 <li class="list-group-item">3. Multi-Threading</li>
@@ -76,16 +73,16 @@
               </ol>
             </li>
             <li class="list-group-item">
-              <div class="panel-heading">
+              <div class="panel-heading" ng-click = js.toggleAdvJava()>
                 <label> Advanced Java </label>
-                <button name="button" ng-click = hs.toggleAdvJava()>
-                  <span ng-if= '!hs.flag_advjava'> + </span>
-                  <span ng-if = 'hs.flag_advjava'> - </span>
-                </button>
+
+                  <span ng-if= '!js.flag_advjava'>  &#9727;&#9698; </span>
+                  <span ng-if = 'js.flag_advjava'> &#9721;&#9701; </span>
+
               </div>
 
               <!-- List group -->
-              <ol class="list-group" ng-show = 'hs.flag_advjava'>
+              <ol class="list-group" ng-show = 'js.flag_advjava'>
                 <li class="list-group-item">1. Introduction </li>
                 <li class="list-group-item">2. JDBC </li>
                 <li class="list-group-item">3. Servlets</li>
@@ -95,16 +92,15 @@
               </ol>
             </li>
             <li class="list-group-item">
-              <div class="panel-heading">
+              <div class="panel-heading" ng-click = js.toggleSpring()>
                 <label> Spring </label>
-                <button name="button" ng-click = hs.toggleSpring()>
-                  <span ng-if= '!hs.flag_spring'> + </span>
-                  <span ng-if = 'hs.flag_spring'> - </span>
-                </button>
+                  <span ng-if= '!js.flag_spring'>  &#9727;&#9698;</span>
+                  <span ng-if = 'js.flag_spring'> &#9721;&#9701; </span>
+
               </div>
 
               <!-- List group -->
-              <ol class="list-group" ng-show = 'hs.flag_spring'>
+              <ol class="list-group" ng-show = 'js.flag_spring'>
                 <li class="list-group-item">1. Lorem</li>
                 <li class="list-group-item">2. Ipsum</li>
                 <li class="list-group-item">3. Facebook</li>
@@ -113,16 +109,16 @@
               </ol>
             </li>
             <li class="list-group-item">
-              <div class="panel-heading">
+              <div class="panel-heading"  ng-click = js.toggleSpringMvc()>
                 <label> Spring MVC </label>
-                <button name="button" ng-click = hs.toggleSpringMvc()>
-                  <span ng-if= '!hs.flag_spring_mvc'> + </span>
-                  <span ng-if = 'hs.flag_spring_mvc'> - </span>
-                </button>
+
+                  <span ng-if= '!js.flag_spring_mvc'>  &#9727;&#9698; </span>
+                  <span ng-if = 'js.flag_spring_mvc'> &#9721;&#9701; </span>
+
               </div>
 
               <!-- List group -->
-              <ol class="list-group" ng-show = 'hs.flag_spring_mvc'>
+              <ol class="list-group" ng-show = 'js.flag_spring_mvc'>
                 <li class="list-group-item">1. Lorem</li>
                 <li class="list-group-item">2. Ipsum</li>
                 <li class="list-group-item">3. Facebook</li>
@@ -131,16 +127,16 @@
               </ol>
             </li>
             <li class="list-group-item">
-              <div class="panel-heading">
+              <div class="panel-heading" ng-click = js.toggleHibernate()>
                 <label> Hibernate </label>
-                <button name="button" ng-click = hs.toggleHibernate()>
-                  <span ng-if= '!hs.flag_hibernate'> + </span>
-                  <span ng-if = 'hs.flag_hibernate'> - </span>
-                </button>
+
+                  <span ng-if= '!js.flag_hibernate'>  &#9727;&#9698; </span>
+                  <span ng-if = 'js.flag_hibernate'> &#9721;&#9701; </span>
+
               </div>
 
               <!-- List group -->
-              <ol class="list-group" ng-show = 'hs.flag_hibernate'>
+              <ol class="list-group" ng-show = 'js.flag_hibernate'>
                 <li class="list-group-item">1. Lorem</li>
                 <li class="list-group-item">2. Ipsum</li>
                 <li class="list-group-item">3. Facebook</li>
@@ -153,14 +149,14 @@
 
       <div class="panel panel-default">
           <!-- Default panel contents -->
-          <div class="panel-heading">
+          <div class="panel-heading" ng-click = js.toggleFee()>
             <label> FEE DETAILS</label>
-            <button name="button" ng-click = hs.toggleFee()>
-              <span ng-if = '!hs.flag_fee'> + </span>
-              <span ng-if = 'hs.flag_fee'> - </span>
-            </button>
+
+              <span ng-if = '!js.flag_fee'>  &#9727;&#9698; </span>
+              <span ng-if = 'js.flag_fee'> &#9721;&#9701; </span>
+
           </div>
-          <div class="panel-body" ng-show = 'hs.flag_fee'>
+          <div class="panel-body" ng-show = 'js.flag_fee'>
               <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,a a</p>
               <p> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup.</p>
               <p> m, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
@@ -171,14 +167,14 @@
 
       <div class="panel panel-default">
           <!-- Default panel contents -->
-          <div class="panel-heading">
+          <div class="panel-heading" ng-click = js.toggleNewBatches()>
             <label> NEW BATCHES</label>
-            <button name="button" ng-click = hs.toggleNewBatches()>
-              <span ng-if= '!hs.flag_new_batches'> + </span>
-              <span ng-if = 'hs.flag_new_batches'> - </span>
-            </button>
+
+              <span ng-if= '!js.flag_new_batches'>  &#9727;&#9698; </span>
+              <span ng-if = 'js.flag_new_batches'> &#9721;&#9701; </span>
+
           </div>
-          <div class="panel-body" ng-show = 'hs.flag_new_batches'>
+          <div class="panel-body" ng-show = 'js.flag_new_batches'>
               <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,a a</p>
               <p> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup.</p>
               <p> m, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
@@ -189,14 +185,14 @@
 
       <div class="panel panel-default">
           <!-- Default panel contents -->
-          <div class="panel-heading">
+          <div class="panel-heading" ng-click = js.toggleStaffDetails()>
             <label> STAFF DETAILS</label>
-            <button name="button" ng-click = hs.toggleStaffDetails()>
-              <span ng-if= '!hs.flag_staff_details'> + </span>
-              <span ng-if= 'hs.flag_staff_details'> - </span>
-            </button>
+
+              <span ng-if= '!js.flag_staff_details'>  &#9727;&#9698; </span>
+              <span ng-if= 'js.flag_staff_details'> &#9721;&#9701; </span>
+
           </div>
-          <div class="panel-body" ng-show = 'hs.flag_staff_details'>
+          <div class="panel-body" ng-show = 'js.flag_staff_details'>
               <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,a a</p>
               <p> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup.</p>
               <p> m, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
@@ -207,14 +203,14 @@
 
       <div class="panel panel-default">
           <!-- Default panel contents -->
-          <div class="panel-heading">
+          <div class="panel-heading" ng-click = js.toggleTimings()>
             <label> TIMINGS</label>
-            <button name="button" ng-click = hs.toggleTimings()>
-              <span ng-if= '!hs.flag_timings'> + </span>
-              <span ng-if = 'hs.flag_timings'> - </span>
-            </button>
+
+              <span ng-if= '!js.flag_timings'>  &#9727;&#9698; </span>
+              <span ng-if = 'js.flag_timings'> &#9721;&#9701; </span>
+
           </div>
-          <div class="panel-body" ng-show = 'hs.flag_timings'>
+          <div class="panel-body" ng-show = 'js.flag_timings'>
               <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,a a</p>
               <p> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup.</p>
               <p> m, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
@@ -250,9 +246,14 @@
       <script type="text/javascript">
         window.sr = ScrollReveal();
         sr.reveal('#footer1', {
-          duration: 2000,
+          duration: 500,
           origin:'bottom'
         });
+        sr.reveal('.navbar', {
+          duration: 500,
+          origin:'bottom'
+        });
+
       </script>
 
   </div>

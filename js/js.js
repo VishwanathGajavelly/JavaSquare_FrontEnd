@@ -1,7 +1,12 @@
-var mod = angular.module('Hideseek' , []);
-mod.controller('Hideseek', Hideseek) ;
+var mod = angular.module('JavaSquare' , []);
+mod.controller('JavaSquare', JavaSquare) ;
+mod.controller ("CharacterCount", CharacterCount) ;
 
-function Hideseek() {
+function CharacterCount(){
+
+}
+
+function JavaSquare() {
   this.flag_courses = false;
   this.flag_java = false;
   this.flag_advjava = false;

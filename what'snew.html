@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "JavaSquare">
   <head>
     <meta charset="utf-8">
     <title> ScrollTheWay! </title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum|Oswald|Slabo+27px" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/master.css">
+    <script src="js/angular.js" charset="utf-8"></script>
+    <script src="js/js.js" charset="utf-8"></script>
+
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   </head>
 
@@ -178,7 +181,7 @@
             <form>
               <div class="form-group">
                 <label> SUBSCRIBE TO OUR NEWS LETTER </label>
-                
+
               </div>
               <div class="form-group">
                 <label>Name: </label>
@@ -188,9 +191,10 @@
                 <label>Email: </label>
                 <input class="form-control" type="text" name="" value="" placeholder="Enter Email">
               </div>
-              <div class="form-group">
+              <div ng-controller = 'CharacterCount as cc' class="form-group">
                 <label>Message: </label>
-                <textarea class="form-control" name="" value="" placeholder="Enter Message"></textarea>
+                <textarea class="form-control" ng-model = "cc.text" value="" placeholder="Enter Message"></textarea>
+                {{ 250- cc.text.length}} Characters left
               </div>
               <button class="btn btn-default">Submit</button>
             </form>
@@ -236,25 +240,25 @@
               origin:'bottom'
             });
             sr.reveal('.showcase-left', {
-              duration: 2000,
+              duration: 1500,
               origin:'left',
               distance:'200px'
             });
             sr.reveal('.showcase-right', {
-              duration: 2000,
+              duration: 1500,
               origin:'right',
               distance:'200px'
             });
 
 
             sr.reveal('.info-left', {
-              duration: 2500,
+              duration: 1500,
               origin:'right',
               distance:'200px',
               viewFactor: 0.1
             });
             sr.reveal('.info-right', {
-              duration: 2500,
+              duration: 1500,
               origin:'left',
               distance:'200px',
               viewFactor: 0.1
@@ -268,7 +272,7 @@
             });
 
             sr.reveal('#footer1', {
-              duration: 1000,
+              duration: 500,
               origin:'bottom',
               distance:'10px',
               viewFactor: 0.9
