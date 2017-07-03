@@ -61,7 +61,7 @@ label {
 }
 
 .menu li .active {
-  color: #fde126;
+  color: red;
 }
 .menu a:hover {
   background-color: transparent;
