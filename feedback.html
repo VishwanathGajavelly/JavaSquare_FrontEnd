@@ -15,32 +15,38 @@
   <body>
   <div class="pageWrapper">
 
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <img alt="Brand" src="img/js.jpg" style="margin-top: 8px !important;  max-height: 35px; max-width: 35px; border-radius: 4px; ">
-          <a class="navbar-brand" href="#"> Java Square</a>
-        </div>
-        <br>
-        <div class="menu">
-          <ul>
-      			<li>  <a href="mailto: vishwanath.can@gmail.com">eMail Us </a></li>
-      			<li> <a class="active" href="feedbackForm.jsp">Feedback </a> </li>
-      			<li> <a href="whatsNew.jsp"> What's New </a> </li>
-            <li> <a href="courses.jsp"> Courses </a> </li>
-      			<li> <a href="index.jsp">Home </a> </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+
+          <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+              <div class="navbar-header">
+                <img alt="Brand" src="img/js.jpg" style="margin-top: 8px !important;  max-height: 35px; max-width: 35px; border-radius: 4px; ">
+                <a class="navbar-brand" href="index.html"> Java Square</a>
+              </div>
+              <br>
+              <div class="menu">
+                <ul>
+            			<li>  <a href="mailto: vishwanath.can@gmail.com">eMail Us </a></li>
+            			<li> <a class="active" href="feedback.html">Feedback </a> </li>
+            			<li> <a href="what'sNew.html"> What's New </a> </li>
+                  <li> <a href="courses.html"> Courses </a> </li>
+            			<li> <a href="index.html">Home </a> </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+
 
   <div class="container">
 
     <div class="row">
-      <div class="col-md-6 col-sm-6">
+      <div class="col-md-2 col-sm-2">
+      </div>
+
+      <div class="col-md-5 col-sm-5">
         <form>
-          <div style="margin-top: 30px;"class="form-group">
-            <label> Feedback Form: </label>
+          <div  style="margin-top: 30px;" class="form-group">
+            <center> <label> <h1> <u> Feedback Form </u> </h1> </label> </center>
 
           </div>
           <div class="form-group">
@@ -83,7 +89,7 @@
           <button class="btn btn-default">Submit</button>
         </form>
       </div>
-      <div class="col-md-6 col-sm-6">
+      <div class="col-md-5 col-sm-5">
 
       </div>
     </div>
@@ -119,7 +125,8 @@
     window.sr = ScrollReveal();
     sr.reveal('#footer1', {
       duration: 500,
-      origin:'bottom'
+      origin:'bottom',
+      viewFactor: 0.5
     });
     sr.reveal('.navbar', {
       duration: 500,
