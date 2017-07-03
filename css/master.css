@@ -19,12 +19,52 @@ button {
 span {
   color : black;
 }
+html {
+    position: relative;
+    min-height: 100%;
+}
 
 body {
+  margin-top: 60px;
+  color: #222222;
   font-family: Cuprum ;
   font-size: 18px;
   background-color: #f1f1f1 ;
 }
+
+h1,h2,h3,h4,h5,h6{
+  font-family:Cuprum;
+  font-size: 40px;
+}
+/*================= WHAT'S NEW STYLING==================================*/
+
+p{
+  font-family:slabo;
+}
+
+.section{
+  padding: 10px;
+}
+.section img {
+  width:90%;
+  max-height: 300px;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+#contact{
+
+  background-attachment: fixed;
+  background-image: url(../img/footer.jpg);
+  font-family: Cuprum;
+  background-repeat: no-repeat;
+  padding:40px;
+  color:#000;
+  border-top:#333 4px solid;
+  border-bottom:#333 7px solid;
+}
+
+
+/*=================END OF WHAT'S NEW STYLING==================================*/
 label {
   font-family: oswald;
   font-weight: 500;
@@ -32,6 +72,31 @@ label {
   text-transform: uppercase;
 }
 
+
+
+
+
+/*=================NAVBAR STYLING==================================*/
+
+#navlist {
+  color: #fff !important;
+}
+
+.navbar-brand {
+  font-size: 30px;
+  color: white !important;
+}
+.menu li .active {
+  color: #fde126;
+}
+.menu a:hover {
+  background-color: transparent;
+  text-decoration: none;
+  border-top-width: 1px;
+  border-top-style: solid;
+  padding-top: 10px;
+  color: orange;
+}
 .navbar-default{
   font-family: Cuprum;
   font-size: 20px;
@@ -54,30 +119,28 @@ label {
 
 }
 
-.clearfix::after {
-  content: " " ;
-  display: table;
-  clear : both;
-}
-
-.menu li .active {
-  color: #fde126;
-}
-.menu a:hover {
-  background-color: transparent;
-  text-decoration: none;
-  border-top-width: 1px;
-  border-top-style: solid;
-  padding-top: 10px;
-  color: orange;
-}
+/*=================FOOTER STYLING==================================*/
 
 #footer1 {
-  margin-top:132px;
+
   background-color: black;
   padding-top: 15px;
-  margin-bottom:5px;
+  margin-bottom: 3px;
   color: white;
+  position: absolute;
+  bottom: 0;
+  overflow:hidden;
+  width: 100%;
+}
+
+.pageWrapper {
+  margin-bottom: 100px;
+}
+
+#footer1 p {
+  font-family: Cuprum;
+  font-size: 20px;
+
 }
 
 #icons{
@@ -86,13 +149,4 @@ max-width: 25px;
 max-height: 25px;
 cursor: pointer;
 margin-right: 6px; /* distance between the icons*/
-}
-
-#navlist {
-  color: #fff !important;
-}
-
-.navbar-brand {
-  font-size: 30px;
-  color: white !important;
 }
