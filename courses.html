@@ -1,265 +1,224 @@
 <!DOCTYPE html>
-<html ng-app = 'JavaSquare'>
-  <head>
-    <meta charset="utf-8">
-    <title> JavaSquare- Courses </title>
-    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css?family=Cuprum|Oswald|Slabo+27px" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<html ng-app='JavaSquare'>
+
+<head>
+  <meta charset="utf-8">
+  <title> JavaSquare- Courses </title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum|Oswald|Slabo+27px" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
 
-    <script src="js/angular.js" charset="utf-8"></script>
-    <script src="js/js.js" charset="utf-8"></script>
+  <script src="js/angular.js" charset="utf-8"></script>
+  <script src="js/js.js" charset="utf-8"></script>
 
-    <link rel="stylesheet" href="css/master.css">
-  </head>
-  <body>
+  <link rel="stylesheet" href="css/master.css">
+</head>
+
+<body>
   <div class="pageWrapper">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <img alt="Brand" src="img/js.jpg" style="margin-top: 8px !important;  max-height: 35px; max-width: 35px; border-radius: 4px; ">
 
-
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <img alt="Brand" src="img/js.jpg" style="margin-top: 8px !important;  max-height: 35px; max-width: 35px; border-radius: 4px; ">
-
-        <a class="navbar-brand" href="index.html"> Java Square</a>
+          <a class="navbar-brand" href="index.html"> Java Square</a>
+        </div>
+        <br>
+        <div class="menu">
+          <ul>
+            <li> <a href="mailto: vishwanath.can@gmail.com">eMail Us </a></li>
+            <li> <a href="feedback.html">Feedback </a> </li>
+            <li> <a href="what'sNew.html"> What's New </a> </li>
+            <li> <a class="active" href="courses.html"> Courses </a> </li>
+            <li> <a href="index.html">Home </a> </li>
+          </ul>
+        </div>
       </div>
-      <br>
-      <div class="menu">
-        <ul>
-    			<li>  <a href="mailto: vishwanath.can@gmail.com">eMail Us </a></li>
-    			<li> <a href="feedback.html">Feedback </a> </li>
-    			<li> <a href="what'sNew.html"> What's New </a> </li>
-          <li> <a class="active" href="courses.html"> Courses </a> </li>
-    			<li> <a href="index.html">Home </a> </li>
-        </ul>
+    </nav>
+
+
+    <div class="container" ng-controller='JavaSquare as js' style=' margin-top: 80px;'>
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading" ng-click= js.toggleCourses()>
+          <label style="color: #444444"> COURSES OFFERED </label>
+          <span ng-if='!js.flag_courses'>  &#9727;&#9698; </span>
+          <span ng-if='js.flag_courses'> &#9721;&#9701; </span>
+        </div>
+        <div class="panel-body" ng-show='js.flag_courses'>
+          <p> Specialized in offering Core Java.</p>
+          <p> We educate students in all the Java Frameworks</p>
+          <p> Theriotical Clases with lab sessions </p>
+          <p> A Full-stack web-based project will be developed from scratch. </p>
+        </div>
+        <!-- List group -->
+        <ol class="list-group" ng-show='js.flag_courses'>
+          <li class="list-group-item">
+            <div class="panel-heading" ng-click= js.toggleJava()>
+              <label> Java </label>
+              <span ng-if='!js.flag_java'>  &#9727;&#9698;  </span>
+              <span ng-if='js.flag_java'> &#9721;&#9701;  </span>
+            </div>
+            <!-- List group -->
+            <ol class="list-group" ng-show='js.flag_java'>
+              <li class="list-group-item">1. Introduction</li>
+              <li class="list-group-item">2. OOPS concepts</li>
+              <li class="list-group-item">3. Multi-Threading</li>
+              <li class="list-group-item">4. Exception-Handling</li>
+              <li class="list-group-item">5. Garbage-Collection</li>
+            </ol>
+          </li>
+          <li class="list-group-item">
+            <div class="panel-heading" ng-click= js.toggleAdvJava()>
+              <label> Advanced Java </label>
+              <span ng-if='!js.flag_advjava'>  &#9727;&#9698; </span>
+              <span ng-if='js.flag_advjava'> &#9721;&#9701; </span>
+            </div>
+            <!-- List group -->
+            <ol class="list-group" ng-show='js.flag_advjava'>
+              <li class="list-group-item">1. Introduction </li>
+              <li class="list-group-item">2. JDBC </li>
+              <li class="list-group-item">3. Servlets</li>
+              <li class="list-group-item">4. JSP</li>
+              <li class="list-group-item">5. Session Tracking</li>
+              <li class="list-group-item">6. RMI</li>
+            </ol>
+          </li>
+          <li class="list-group-item">
+            <div class="panel-heading" ng-click= js.toggleSpring()>
+              <label> Spring </label>
+              <span ng-if='!js.flag_spring'>  &#9727;&#9698;</span>
+              <span ng-if='js.flag_spring'> &#9721;&#9701; </span>
+            </div>
+            <!-- List group -->
+            <ol class="list-group" ng-show='js.flag_spring'>
+              <li class="list-group-item">1. Lorem</li>
+              <li class="list-group-item">2. Ipsum</li>
+              <li class="list-group-item">3. Facebook</li>
+              <li class="list-group-item">4. Twitter</li>
+              <li class="list-group-item">5. LinkedIn</li>
+            </ol>
+          </li>
+          <li class="list-group-item">
+            <div class="panel-heading" ng-click= js.toggleSpringMvc()>
+              <label> Spring MVC </label>
+              <span ng-if='!js.flag_spring_mvc'>  &#9727;&#9698; </span>
+              <span ng-if='js.flag_spring_mvc'> &#9721;&#9701; </span>
+            </div>
+            <!-- List group -->
+            <ol class="list-group" ng-show='js.flag_spring_mvc'>
+              <li class="list-group-item">1. Lorem</li>
+              <li class="list-group-item">2. Ipsum</li>
+              <li class="list-group-item">3. Facebook</li>
+              <li class="list-group-item">4. Twitter</li>
+              <li class="list-group-item">5. LinkedIn</li>
+            </ol>
+          </li>
+          <li class="list-group-item">
+            <div class="panel-heading" ng-click= js.toggleHibernate()>
+              <label> Hibernate </label>
+              <span ng-if='!js.flag_hibernate'>  &#9727;&#9698; </span>
+              <span ng-if='js.flag_hibernate'> &#9721;&#9701; </span>
+            </div>
+            <!-- List group -->
+            <ol class="list-group" ng-show='js.flag_hibernate'>
+              <li class="list-group-item">1. Lorem</li>
+              <li class="list-group-item">2. Ipsum</li>
+              <li class="list-group-item">3. Facebook</li>
+              <li class="list-group-item">4. Twitter</li>
+              <li class="list-group-item">5. LinkedIn</li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading" ng-click= js.toggleFee()>
+          <label> FEE DETAILS</label>
+          <span ng-if='!js.flag_fee'>  &#9727;&#9698; </span>
+          <span ng-if='js.flag_fee'> &#9721;&#9701; </span>
+        </div>
+        <div class="panel-body" ng-show='js.flag_fee'>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,a a</p>
+          <p> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup.</p>
+          <p> m, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+          <p> sed do eiusmod tempor incididunt ut labore et dolore magn</p>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading" ng-click= js.toggleNewBatches()>
+          <label> NEW BATCHES</label>
+          <span ng-if='!js.flag_new_batches'>  &#9727;&#9698; </span>
+          <span ng-if='js.flag_new_batches'> &#9721;&#9701; </span>
+        </div>
+        <div class="panel-body" ng-show='js.flag_new_batches'>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,a a</p>
+          <p> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup.</p>
+          <p> m, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+          <p> sed do eiusmod tempor incididunt ut labore et dolore magn</p>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading" ng-click= js.toggleStaffDetails()>
+          <label> STAFF DETAILS</label>
+          <span ng-if='!js.flag_staff_details'>  &#9727;&#9698; </span>
+          <span ng-if='js.flag_staff_details'> &#9721;&#9701; </span>
+        </div>
+        <div class="panel-body" ng-show='js.flag_staff_details'>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,a a</p>
+          <p> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup.</p>
+          <p> m, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+          <p> sed do eiusmod tempor incididunt ut labore et dolore magn</p>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading" ng-click= js.toggleTimings()>
+          <label> TIMINGS</label>
+          <span ng-if='!js.flag_timings'>  &#9727;&#9698; </span>
+          <span ng-if='js.flag_timings'> &#9721;&#9701; </span>
+        </div>
+        <div class="panel-body" ng-show='js.flag_timings'>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,a a</p>
+          <p> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup.</p>
+          <p> m, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+          <p> sed do eiusmod tempor incididunt ut labore et dolore magn</p>
+        </div>
       </div>
     </div>
-  </nav>
-
-
-<div class="container" ng-controller = 'JavaSquare as js' style= ' margin-top: 80px;' >
-      <div class="panel panel-default">
-          <!-- Default panel contents -->
-          <div class="panel-heading" ng-click = js.toggleCourses()>
-            <label style="color: #444444"> COURSES OFFERED </label>
-
-              <span ng-if= '!js.flag_courses'>  &#9727;&#9698; </span>
-              <span ng-if = 'js.flag_courses'> &#9721;&#9701; </span>
-
+    <footer id="footer1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-sm-5">
+            <p> Author: Vishwanath Gajavelly</p>
           </div>
-          <div class="panel-body" ng-show = 'js.flag_courses'>
-              <p> Specialized in offering Core Java.</p>
-              <p> We educate students in all the Java Frameworks</p>
-              <p> Theriotical Clases with lab sessions </p>
-              <p> A Full-stack web-based project will be developed from scratch. </p>
+          <div class="col-md-5 col-sm-5">
+            <p> JavaSquare! &copy; 2017</p>
           </div>
-
-          <!-- List group -->
-          <ol class="list-group" ng-show = 'js.flag_courses'>
-            <li class="list-group-item">
-              <div class="panel-heading" ng-click = js.toggleJava()>
-                <label> Java </label>
-                  <span ng-if= '!js.flag_java'>  &#9727;&#9698;  </span>
-                  <span ng-if = 'js.flag_java'> &#9721;&#9701;  </span>
-              </div>
-
-              <!-- List group -->
-              <ol class="list-group" ng-show = 'js.flag_java'>
-                <li class="list-group-item">1. Introduction</li>
-                <li class="list-group-item">2. OOPS concepts</li>
-                <li class="list-group-item">3. Multi-Threading</li>
-                <li class="list-group-item">4. Exception-Handling</li>
-                <li class="list-group-item">5. Garbage-Collection</li>
-              </ol>
-            </li>
-            <li class="list-group-item">
-              <div class="panel-heading" ng-click = js.toggleAdvJava()>
-                <label> Advanced Java </label>
-
-                  <span ng-if= '!js.flag_advjava'>  &#9727;&#9698; </span>
-                  <span ng-if = 'js.flag_advjava'> &#9721;&#9701; </span>
-
-              </div>
-
-              <!-- List group -->
-              <ol class="list-group" ng-show = 'js.flag_advjava'>
-                <li class="list-group-item">1. Introduction </li>
-                <li class="list-group-item">2. JDBC </li>
-                <li class="list-group-item">3. Servlets</li>
-                <li class="list-group-item">4. JSP</li>
-                <li class="list-group-item">5. Session Tracking</li>
-                <li class="list-group-item">6. RMI</li>
-              </ol>
-            </li>
-            <li class="list-group-item">
-              <div class="panel-heading" ng-click = js.toggleSpring()>
-                <label> Spring </label>
-                  <span ng-if= '!js.flag_spring'>  &#9727;&#9698;</span>
-                  <span ng-if = 'js.flag_spring'> &#9721;&#9701; </span>
-
-              </div>
-
-              <!-- List group -->
-              <ol class="list-group" ng-show = 'js.flag_spring'>
-                <li class="list-group-item">1. Lorem</li>
-                <li class="list-group-item">2. Ipsum</li>
-                <li class="list-group-item">3. Facebook</li>
-                <li class="list-group-item">4. Twitter</li>
-                <li class="list-group-item">5. LinkedIn</li>
-              </ol>
-            </li>
-            <li class="list-group-item">
-              <div class="panel-heading"  ng-click = js.toggleSpringMvc()>
-                <label> Spring MVC </label>
-
-                  <span ng-if= '!js.flag_spring_mvc'>  &#9727;&#9698; </span>
-                  <span ng-if = 'js.flag_spring_mvc'> &#9721;&#9701; </span>
-
-              </div>
-
-              <!-- List group -->
-              <ol class="list-group" ng-show = 'js.flag_spring_mvc'>
-                <li class="list-group-item">1. Lorem</li>
-                <li class="list-group-item">2. Ipsum</li>
-                <li class="list-group-item">3. Facebook</li>
-                <li class="list-group-item">4. Twitter</li>
-                <li class="list-group-item">5. LinkedIn</li>
-              </ol>
-            </li>
-            <li class="list-group-item">
-              <div class="panel-heading" ng-click = js.toggleHibernate()>
-                <label> Hibernate </label>
-
-                  <span ng-if= '!js.flag_hibernate'>  &#9727;&#9698; </span>
-                  <span ng-if = 'js.flag_hibernate'> &#9721;&#9701; </span>
-
-              </div>
-
-              <!-- List group -->
-              <ol class="list-group" ng-show = 'js.flag_hibernate'>
-                <li class="list-group-item">1. Lorem</li>
-                <li class="list-group-item">2. Ipsum</li>
-                <li class="list-group-item">3. Facebook</li>
-                <li class="list-group-item">4. Twitter</li>
-                <li class="list-group-item">5. LinkedIn</li>
-              </ol>
-            </li>
-          </ol>
-      </div>
-
-      <div class="panel panel-default">
-          <!-- Default panel contents -->
-          <div class="panel-heading" ng-click = js.toggleFee()>
-            <label> FEE DETAILS</label>
-
-              <span ng-if = '!js.flag_fee'>  &#9727;&#9698; </span>
-              <span ng-if = 'js.flag_fee'> &#9721;&#9701; </span>
-
+          <div class="col-md-2 col-sm-2">
+            <a href="https://www.facebook.com/CrazYvIzU"><img id = "icons" src="icons\fb.png"> </a>
+            <a href="https://twitter.com/vissssu"><img id= "icons" src="icons\twitter.png"></a>
+            <a href="https://github.com/VishwanathGajavelly"><img id="icons" src="icons\git.png"></a>
+            <a href="https://www.linkedin.com/in/vishwanath-gajavelly-33973113a/"><img id= "icons" src="icons\L-in.png"></a>
           </div>
-          <div class="panel-body" ng-show = 'js.flag_fee'>
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,a a</p>
-              <p> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup.</p>
-              <p> m, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-              <p> sed do eiusmod tempor incididunt ut labore et dolore magn</p>
-          </div>
-
-      </div>
-
-      <div class="panel panel-default">
-          <!-- Default panel contents -->
-          <div class="panel-heading" ng-click = js.toggleNewBatches()>
-            <label> NEW BATCHES</label>
-
-              <span ng-if= '!js.flag_new_batches'>  &#9727;&#9698; </span>
-              <span ng-if = 'js.flag_new_batches'> &#9721;&#9701; </span>
-
-          </div>
-          <div class="panel-body" ng-show = 'js.flag_new_batches'>
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,a a</p>
-              <p> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup.</p>
-              <p> m, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-              <p> sed do eiusmod tempor incididunt ut labore et dolore magn</p>
-          </div>
-
-      </div>
-
-      <div class="panel panel-default">
-          <!-- Default panel contents -->
-          <div class="panel-heading" ng-click = js.toggleStaffDetails()>
-            <label> STAFF DETAILS</label>
-
-              <span ng-if= '!js.flag_staff_details'>  &#9727;&#9698; </span>
-              <span ng-if= 'js.flag_staff_details'> &#9721;&#9701; </span>
-
-          </div>
-          <div class="panel-body" ng-show = 'js.flag_staff_details'>
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,a a</p>
-              <p> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup.</p>
-              <p> m, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-              <p> sed do eiusmod tempor incididunt ut labore et dolore magn</p>
-          </div>
-
-      </div>
-
-      <div class="panel panel-default">
-          <!-- Default panel contents -->
-          <div class="panel-heading" ng-click = js.toggleTimings()>
-            <label> TIMINGS</label>
-
-              <span ng-if= '!js.flag_timings'>  &#9727;&#9698; </span>
-              <span ng-if = 'js.flag_timings'> &#9721;&#9701; </span>
-
-          </div>
-          <div class="panel-body" ng-show = 'js.flag_timings'>
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,a a</p>
-              <p> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup.</p>
-              <p> m, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-              <p> sed do eiusmod tempor incididunt ut labore et dolore magn</p>
-          </div>
-
-      </div>
-
-
-  </div>
-
-      <footer id="footer1" >
-        <div class="container">
-          <div class="row">
-            <div class="col-md-5 col-sm-5">
-              <p> Author: Vishwanath Gajavelly</p>
-            </div>
-            <div class="col-md-5 col-sm-5">
-              <p> JavaSquare! &copy; 2017</p>
-            </div>
-              <div class="col-md-2 col-sm-2">
-                <a href="https://www.facebook.com/CrazYvIzU"><img id = "icons" src="icons\fb.png"> </a>
-          			<a href="https://twitter.com/vissssu"><img id= "icons" src="icons\twitter.png"></a>
-          			<a href="https://github.com/VishwanathGajavelly"><img id="icons" src="icons\git.png"></a>
-          			<a href="https://www.linkedin.com/in/vishwanath-gajavelly-33973113a/"><img id= "icons" src="icons\L-in.png"></a>
-              </div>
-            </div>
         </div>
-      </footer>
-
-
-
-      <script type="text/javascript">
-        window.sr = ScrollReveal();
-        sr.reveal('#footer1', {
-          duration: 500,
-          origin:'bottom'
-        });
-        sr.reveal('.navbar', {
-          duration: 500,
-          origin:'bottom'
-        });
-
-
-
-      </script>
-
+      </div>
+    </footer>
+    <script type="text/javascript">
+      window.sr = ScrollReveal();
+      sr.reveal('#footer1', {
+        duration: 500,
+        origin: 'bottom'
+      });
+      sr.reveal('.navbar', {
+        duration: 500,
+        origin: 'bottom'
+      });
+    </script>
   </div>
-  </body>
+</body>
 </html>

@@ -1,108 +1,91 @@
-<html ng-app = 'JavaSquare'>
-  <head>
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Cuprum|Oswald|Slabo+27px" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<html ng-app='JavaSquare'>
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum|Oswald|Slabo+27px" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
 
-    <script src="js/angular.js" charset="utf-8"></script>
-    <script src="js/js.js" charset="utf-8"></script>
+  <script src="js/angular.js" charset="utf-8"></script>
+  <script src="js/js.js" charset="utf-8"></script>
 
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-    <title> JavaSquare- Courses </title>
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <title> JavaSquare- Courses </title>
 
-  </head>
-  <body>
+</head>
+
+<body>
   <div class="pageWrapper">
-
-
-          <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-              <div class="navbar-header">
-                <img alt="Brand" src="img/js.jpg" style="margin-top: 8px !important;  max-height: 35px; max-width: 35px; border-radius: 4px; ">
-                <a class="navbar-brand" href="index.html"> Java Square</a>
-              </div>
-              <br>
-              <div class="menu">
-                <ul>
-            			<li>  <a href="mailto: vishwanath.can@gmail.com">eMail Us </a></li>
-            			<li> <a class="active" href="feedback.html">Feedback </a> </li>
-            			<li> <a href="what'sNew.html"> What's New </a> </li>
-                  <li> <a href="courses.html"> Courses </a> </li>
-            			<li> <a href="index.html">Home </a> </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-
-
-
-  <div class="container">
-
-    <div class="row">
-      <div class="col-md-2 col-sm-2">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <img alt="Brand" src="img/js.jpg" style="margin-top: 8px !important;  max-height: 35px; max-width: 35px; border-radius: 4px; ">
+          <a class="navbar-brand" href="index.html"> Java Square</a>
+        </div>
+        <br>
+        <div class="menu">
+          <ul>
+            <li> <a href="mailto: vishwanath.can@gmail.com">eMail Us </a></li>
+            <li> <a class="active" href="feedback.html">Feedback </a> </li>
+            <li> <a href="what'sNew.html"> What's New </a> </li>
+            <li> <a href="courses.html"> Courses </a> </li>
+            <li> <a href="index.html">Home </a> </li>
+          </ul>
+        </div>
       </div>
-
-      <div class="col-md-5 col-sm-5">
-        <form>
-          <div  style="margin-top: 30px;" class="form-group">
-            <center> <label> <h2> <u> Feedback Form </u> </h2> </label> </center>
-
-          </div>
-          <div class="form-group">
-            <label>Name: </label>
-            <input class="form-control" type="text" name="" value="" placeholder="Enter Name">
-          </div>
-          <div class="form-group">
-            <label>Email: </label>
-            <input class="form-control" type="text" name="" value="" placeholder="Enter Email">
-          </div>
-          <div class="form-group">
-            <label>how did you know about us: </label> <br>
-            <select name="how">
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-sm-2">
+        </div>
+        <div class="col-md-5 col-sm-5">
+          <form>
+            <div style="margin-top: 30px;" class="form-group">
+              <center> <label> <h2> <u> Feedback Form </u> </h2> </label> </center>
+            </div>
+            <div class="form-group">
+              <label>Name: </label>
+              <input class="form-control" type="text" name="" value="" placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+              <label>Email: </label>
+              <input class="form-control" type="text" name="" value="" placeholder="Enter Email">
+            </div>
+            <div class="form-group">
+              <label>how did you know about us: </label> <br>
+              <select name="how">
               <option value=" News Paper Advertisement">News Paper Advertisement</option>
               <option value="TV Advertisement"> TV Advertisement</option>
               <option value=" Via Facebook"> Via Facebook</option>
               <option value=" Friends "> Friends or Seniors </option>
               <option value=" Others"> Others...</option>
             </select>
-
-          </div>
-
-          <div class="form-group">
-            <label>subject </label> <br>
-            <select name="subject">
+            </div>
+            <div class="form-group">
+              <label>subject </label> <br>
+              <select name="subject">
               <option value=" General Feedback"> General Feedback</option>
               <option value="About Staff">About Staff</option>
               <option value=" Requesting new Courses"> Requesting new Courses</option>
               <option value=" About Timings "> About Timings </option>
               <option value=" Others"> Others...</option>
             </select>
-
-          </div>
-
-          <div ng-controller= 'CharacterCount as cc' class="form-group">
-            <label>Message: </label>
-            <textarea class="form-control" maxlength="250" ng-model= "cc.text" value="" placeholder="Enter Message"></textarea>
-            {{ 250  - cc.text.length}} characters left
-          </div>
-          <button class="btn btn-default">Submit</button>
-        </form>
-      </div>
-      <div class="col-md-5 col-sm-5">
-
+            </div>
+            <div ng-controller='CharacterCount as cc' class="form-group">
+              <label>Message: </label>
+              <textarea class="form-control" maxlength="250" ng-model="cc.text" value="" placeholder="Enter Message"></textarea> {{ 250 - cc.text.length}} characters left
+            </div>
+            <button class="btn btn-default">Submit</button>
+          </form>
+        </div>
+        <div class="col-md-5 col-sm-5">
+        </div>
       </div>
     </div>
   </div>
-
-
-  </div>
-
-
-
-  <footer id="footer1" >
+  <footer id="footer1">
     <div class="container">
       <div class="row">
         <div class="col-md-5 col-sm-5">
@@ -111,33 +94,26 @@
         <div class="col-md-5 col-sm-5">
           <p> JavaSquare! &copy; 2017</p>
         </div>
-          <div class="col-md-2 col-sm-2">
-            <a href="https://www.facebook.com/CrazYvIzU"><img id = "icons" src="icons\fb.png"> </a>
-      			<a href="https://twitter.com/vissssu"><img id= "icons" src="icons\twitter.png"></a>
-      			<a href="https://github.com/VishwanathGajavelly"><img id="icons" src="icons\git.png"></a>
-      			<a href="https://www.linkedin.com/in/vishwanath-gajavelly-33973113a/"><img id= "icons" src="icons\L-in.png"></a>
-          </div>
+        <div class="col-md-2 col-sm-2">
+          <a href="https://www.facebook.com/CrazYvIzU"><img id = "icons" src="icons\fb.png"> </a>
+          <a href="https://twitter.com/vissssu"><img id= "icons" src="icons\twitter.png"></a>
+          <a href="https://github.com/VishwanathGajavelly"><img id="icons" src="icons\git.png"></a>
+          <a href="https://www.linkedin.com/in/vishwanath-gajavelly-33973113a/"><img id= "icons" src="icons\L-in.png"></a>
         </div>
+      </div>
     </div>
   </footer>
-
-
-
   <script type="text/javascript">
     window.sr = ScrollReveal();
     sr.reveal('#footer1', {
       duration: 500,
-      origin:'bottom',
+      origin: 'bottom',
       viewFactor: 0.5
     });
     sr.reveal('.navbar', {
       duration: 500,
-      origin:'bottom'
+      origin: 'bottom'
     });
-
   </script>
-
-
-
-  </body>
+</body>
 </html>
